@@ -46,6 +46,18 @@ services:
         hosts: ["consul.local"]
         paths:
           - /
+  # twopet authorize
+  - name: authorize-web
+    url: http://172.17.0.1:8091
+    tags:
+     - web
+     - twopet
+     - backend
+    routes: 
+      - name: authorize-web-main
+        hosts: ["epass.twopets.com"]
+        paths:
+          - /
 
 # Each Kong entity (core entity or custom entity introduced by a plugin)
 # can be listed in the top-level as an array of objects:

@@ -17,7 +17,7 @@
 
 #!/bin/sh
 
-docker run -d   --restart=always --name local-kong \
+docker run -d   --restart=always --name kong \
      -v "`pwd`:/usr/local/kong/declarative" \
      -e "KONG_DATABASE=off" \
      -e "KONG_DECLARATIVE_CONFIG=/usr/local/kong/declarative/kong.yml" \
